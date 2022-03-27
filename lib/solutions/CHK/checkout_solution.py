@@ -68,6 +68,9 @@ def checkout(skus: str) -> int:
         # Get value for the items that we have a record for SKU
         if sku in prices:
             total += quantity * prices[sku]
+        else:
+            return -1
 
     return total
+
 
