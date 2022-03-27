@@ -24,9 +24,3 @@ def test_checkout_CC():
 def test_checkout_len_80_CD():
     assert checkout_solution.checkout(
         "DDCDCDDCDDCCDCCDCCCDDDDCCCCCDCDCCCDDCDCDCCCCCDCCDDCDDDDCDCDDCDDDDDCDDCDCDCDCDCCD") == 1395
-
-
-
-
-
-
