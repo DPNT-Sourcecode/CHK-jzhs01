@@ -45,14 +45,15 @@ def checkout(skus: str) -> int:
     productB = Product(sku="B", price=30, offer={PriceReduction(product_count=2, new_price=45)})
     productC = Product(sku="C", price=20)
     productD = Product(sku="D", price=15)
-    productE = Product(sku="E", price=40,offer={})
+    productE = Product(sku="E", price=40, offer={FreeItem(product_count=2, product=productB, count=1)})
 
+    stock = Stock(stock=(productA, productB, productC, productD, productE))
     total = 0
 
     # Grouping count by item TC, SC = O(n), O(n)
     basket = dict()
-    for item in skus:
-        product = Product(item=item)
+    for product_sku in skus:
+        product = Product(item=product_sku)
         if Stock().check_item_in_stock(product=product):
             basket[product] = basket.get(product, 0) + 1
         else:
@@ -78,3 +79,4 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+

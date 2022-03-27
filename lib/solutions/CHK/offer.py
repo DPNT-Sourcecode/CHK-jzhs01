@@ -10,9 +10,10 @@ class Offer:
 
 class PriceReduction(Offer):
     new_price: int
-    super().product_count
+
 
 
 class FreeItem(Offer):
-    item: Product
+    product: Product
     count: int = 1
+
