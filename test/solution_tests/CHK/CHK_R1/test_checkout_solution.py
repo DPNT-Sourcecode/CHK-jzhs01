@@ -10,8 +10,8 @@ def test_checkout_empty():
     assert checkout_solution.checkout("") == 0
 
 
-def test_checkout_empty():
-    assert checkout_solution.checkout("a") == 50
+def test_checkout_lowercase():
+    assert checkout_solution.checkout("a") == -1
 
 
 def test_checkout_AAA():
@@ -67,6 +67,7 @@ def test_checkout_a():
 
 def test_checkout_ABCa():
     assert checkout_solution.checkout("ABCa") == -1
+
 
 
 
