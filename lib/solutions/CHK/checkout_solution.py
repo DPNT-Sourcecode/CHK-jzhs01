@@ -16,5 +16,3 @@ def checkout(skus):
         It will be an int and not a float since the price of every item is a whole number
     """
     pass
-
-
