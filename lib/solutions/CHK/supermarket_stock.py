@@ -9,4 +9,3 @@ class Stock:
 
     def get_deals(self):
         return self.deals
-

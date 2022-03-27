@@ -14,5 +14,3 @@ class Stock(Product):
     def check_item_in_stock(self, product: Product):
         return product in self.stock
 
-
-
