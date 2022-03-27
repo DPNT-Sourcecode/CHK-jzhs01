@@ -1,6 +1,7 @@
 from collections import Counter
 from lib.solutions.CHK.stock import Stock
 from lib.solutions.CHK.product import Product
+
 # noinspection PyUnusedLocal
 # skus = unicode string
 """
@@ -37,6 +38,12 @@ def checkout(skus: str) -> int:
         It will be an int and not a float since the price of every item is a whole number
     """
 
+    productA = Product(sku="A", price=50, offer={3: 130})
+    productB = Product(sku="B", price=30, offer={2: 45})
+    productC = Product(sku="C", price=20),
+    productD = Product(sku="D", price=15)
+    productE = Product(sku="D", price=15)
+
     total = 0
 
     # Grouping count by item TC, SC = O(n), O(n)
@@ -47,7 +54,6 @@ def checkout(skus: str) -> int:
             basket[product] = basket.get(product, 0) + 1
         else:
             return -1
-
 
     # for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
     #
