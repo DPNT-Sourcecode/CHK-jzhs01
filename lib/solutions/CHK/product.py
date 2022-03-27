@@ -14,4 +14,3 @@ class Product(Offer):
 
     def __eq__(self, product):
         return self.sku == product.sku
-
