@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 from lib.solutions.CHK.offer import Offer
 
+
 @dataclass
 class Product(Offer):
     sku: str
@@ -13,3 +14,4 @@ class Product(Offer):
 
     def __eq__(self, product):
         return self.sku == product.sku
+
