@@ -46,14 +46,11 @@ def checkout(skus: str) -> int:
         It will be an int and not a float since the price of every item is a whole number
     """
 
-    # Base case
-    if skus == "":
-        return 0
-
     total = 0
 
-    # Grouping count by item
-    basket = Counter(skus)  # <SC, TC> = O(n), O(n)
+    # Grouping count by item # <SC, TC> = O(n), O(n)
+    basket = dict()
+    for item in skus:
 
     for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
 
@@ -75,4 +72,5 @@ def checkout(skus: str) -> int:
 
     from lib.solutions.CHK.product import Product
     return Product(sku="Z") in Stock().stock
+
 
