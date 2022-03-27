@@ -10,4 +10,3 @@ class TestSum():
 
     def test_edge_case_hundreds(self):
         assert sum_solution.compute(100, 100) == 200
-
