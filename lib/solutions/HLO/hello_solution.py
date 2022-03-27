@@ -1,8 +1,6 @@
-
-
 # noinspection PyUnusedLocal
 # friend_name = unicode string
-def hello(friend_name):
+def hello(friend_name: str):
     """
     @args
     friend_name: str, a name of a friend
@@ -11,4 +9,5 @@ def hello(friend_name):
 
     """
     return f"{str(friend_name)}, hello!"
+
 
