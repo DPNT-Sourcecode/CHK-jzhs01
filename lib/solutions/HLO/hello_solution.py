@@ -8,7 +8,8 @@ def hello(friend_name: str):
     @return
 
     """
-    return "Hello, World!"
+    return f"Hello, {friend_name}!"
+
 
 
 
