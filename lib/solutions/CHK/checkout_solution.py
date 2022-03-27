@@ -15,4 +15,5 @@ def checkout(skus):
         total value of all items in the basket.
         It will be an int and not a float since the price of every item is a whole number
     """
-    pass
+
+
