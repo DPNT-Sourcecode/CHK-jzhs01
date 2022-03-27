@@ -1,4 +1,7 @@
-class Product:
+from lib.solutions.CHK.offer import Offer
+
+
+class Product(Offer):
     def __init__(self, sku: str, price: int = None, offer: dict = None):
         self.sku = sku
         self.price = price
