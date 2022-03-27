@@ -16,6 +16,8 @@ def test_checkout_BB():
 def test_checkout_CC():
     assert checkout_solution.checkout("CC") == 40
 
+def test_checkout_
+
 
 
 
