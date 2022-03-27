@@ -1,5 +1,5 @@
 from collections import Counter
-from supermarket_stock import Stock
+from lib.solutions.CHK.supermarket_stock import Stock
 
 
 # noinspection PyUnusedLocal
@@ -49,8 +49,8 @@ def checkout(skus: str) -> int:
 
     # Getting data from stock class
     stock = Stock()
-    prices = stock.prices
-    deals = stock.deals
+    prices = stock.get_prices()
+    deals = stock.get_deals()
 
     total = 0
 
@@ -67,3 +67,4 @@ def checkout(skus: str) -> int:
         total += quantity * prices[sku]
 
     return total
+
