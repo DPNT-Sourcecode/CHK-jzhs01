@@ -1,5 +1,5 @@
 from collections import Counter
-from lib.solutions.CHK.supermarket_stock import Stock
+from lib.solutions.CHK.stock import Stock
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -46,34 +46,38 @@ def checkout(skus: str) -> int:
         It will be an int and not a float since the price of every item is a whole number
     """
 
-    # Base case
-    if skus == "":
-        return 0
+    # # Base case
+    # if skus == "":
+    #     return 0
+    #
+    # # Getting data from stock class
+    # stock = Stock()
+    # prices = stock.get_prices()
+    # deals = stock.get_deals()
+    #
+    # total = 0
+    #
+    # # Grouping count by item
+    # basket = Counter(skus)  # <SC, TC> = O(n), O(n)
+    #
+    # for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
+    #
+    #     # Accounting for the characters that are not stock
+    #     if sku not in prices:
+    #         return -1
+    #
+    #     # Get total value for the deal
+    #     if sku in deals:
+    #         deal_quantity, price = deals[sku]
+    #         total += quantity // deal_quantity * price
+    #         quantity %= deal_quantity
+    #
+    #     # Get value for the items that we have a record for SKU
+    #     if sku in prices:
+    #         total += quantity * prices[sku]
+    #
+    # return total
 
-    # Getting data from stock class
-    stock = Stock()
-    prices = stock.get_prices()
-    deals = stock.get_deals()
+    import product
+    return product.Product(sku=skus) in Stock().stock
 
-    total = 0
-
-    # Grouping count by item
-    basket = Counter(skus)  # <SC, TC> = O(n), O(n)
-
-    for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
-
-        # Accounting for the characters that are not stock
-        if sku not in prices:
-            return -1
-
-        # Get total value for the deal
-        if sku in deals:
-            deal_quantity, price = deals[sku]
-            total += quantity // deal_quantity * price
-            quantity %= deal_quantity
-
-        # Get value for the items that we have a record for SKU
-        if sku in prices:
-            total += quantity * prices[sku]
-
-    return total

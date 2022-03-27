@@ -1,4 +1,4 @@
-from lib.solutions.CHK.approach_2.product import Product
+from lib.solutions.CHK.product import Product
 
 
 class Stock(Product):

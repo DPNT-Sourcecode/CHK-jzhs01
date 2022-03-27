@@ -1,6 +1,3 @@
-from lib.solutions.CHK.approach_2.product import Product
-
-
 class Stock:
 
     def __init__(self):
@@ -12,3 +9,4 @@ class Stock:
 
     def get_deals(self):
         return self.deals
+
