@@ -59,6 +59,9 @@ def checkout(skus: str) -> int:
     basket = Counter(skus.upper())  # <SC, TC> = O(n), O(n)
 
     for sku, quantity in basket.items():
+        # Accounting for the characters that are not stock
+        if sku not in prices:
+            return -1
         # Get total value for the deal
         if sku in deals:
             deal_quantity, price = deals[sku]
@@ -68,9 +71,8 @@ def checkout(skus: str) -> int:
         # Get value for the items that we have a record for SKU
         if sku in prices:
             total += quantity * prices[sku]
-        else:
-            return -1
 
     return total
+
 
 
