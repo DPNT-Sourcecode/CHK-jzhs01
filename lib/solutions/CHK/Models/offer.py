@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class Offer:
     product_count: int
 
-
+@dataclass
 class PriceReduction(Offer):
     new_price: int
 
@@ -13,4 +13,5 @@ class PriceReduction(Offer):
 # class FreeItem(Offer):
 #     product: Product
 #     count: int = 1
+
 
