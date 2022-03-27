@@ -6,6 +6,7 @@ def compute(x: int, y: int) -> int:
     @return: an Integer representing the sum of the two numbers
     """
     # raise NotImplementedError()
-    
+    return x+y
+
 
 
