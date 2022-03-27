@@ -6,8 +6,7 @@ def compute(x: int = 0, y: int = 0) -> int:
     y: a positive integer between 0-100
     @return: an Integer representing the sum of the two numbers
     """
-    # raise NotImplementedError()
-    assert isinstance(x,int)
-    return x+y
+    return x + y
+
 
 
