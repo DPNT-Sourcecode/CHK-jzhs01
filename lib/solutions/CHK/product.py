@@ -1,11 +1,12 @@
+from dataclasses import dataclass
+
 from lib.solutions.CHK.offer import Offer
 
-
+@dataclass
 class Product(Offer):
-    def __init__(self, sku: str, price: int = None, offer: dict = None):
-        self.sku = sku
-        self.price = price
-        self.offer = offer
+    sku: str
+    price: int = None
+    offer: dict = None
 
     def __hash__(self):
         return hash(self.sku)
