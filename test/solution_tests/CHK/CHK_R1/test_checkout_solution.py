@@ -64,8 +64,10 @@ def test_checkout_other_characters_present():
 def test_checkout_a():
     assert checkout_solution.checkout("a") == -1
 
-def test_checkout_a():
+
+def test_checkout_ABCa():
     assert checkout_solution.checkout("ABCa") == -1
+   
 
 
 
