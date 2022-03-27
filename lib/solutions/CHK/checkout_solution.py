@@ -48,9 +48,11 @@ def checkout(skus: str) -> int:
     """
 
     # Getting data from stock class
-    stock = Stock()
-    prices = stock.get_prices()
-    deals = stock.get_deals()
+    # stock = Stock()
+    # prices = stock.get_prices()
+    # deals = stock.get_deals()
+    prices = {"A": 50, "B": 30, "C": 20, "D": 15}
+    deals = {"A": [3, 130], "B": [2, 45]}
 
     total = 0
 
@@ -67,4 +69,5 @@ def checkout(skus: str) -> int:
         total += quantity * prices[sku]
 
     return total
+
 
