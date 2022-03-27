@@ -11,6 +11,7 @@ class Product:
 
     # def __hash__(self):
     #     return hash(self.sku)
-    #
+
     # def __eq__(self, product):
     #     return self.sku == product.sku
+
