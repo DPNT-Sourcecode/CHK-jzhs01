@@ -9,7 +9,7 @@ also for all other characters possible
 
 
 def test_check_if_product_in_stock():
-    assert checkout_solution.checkout("A") == True
+    assert checkout_solution.checkout("A")
 
 
 @pytest.mark.skip
@@ -87,4 +87,5 @@ def test_checkout_a():
 @pytest.mark.skip
 def test_checkout_ABCa():
     assert checkout_solution.checkout("ABCa") == -1
+
 

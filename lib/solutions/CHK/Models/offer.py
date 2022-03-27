@@ -1,7 +1,5 @@
 from dataclasses import dataclass
 
-from lib.solutions.CHK.Models.product import Product
-
 
 @dataclass
 class Offer:
@@ -12,7 +10,7 @@ class PriceReduction(Offer):
     new_price: int
 
 
+# class FreeItem(Offer):
+#     product: Product
+#     count: int = 1
 
-class FreeItem(Offer):
-    product: Product
-    count: int = 1
