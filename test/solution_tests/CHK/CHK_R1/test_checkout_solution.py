@@ -67,7 +67,3 @@ def test_checkout_a():
 
 def test_checkout_ABCa():
     assert checkout_solution.checkout("ABCa") == -1
-
-
-
-
