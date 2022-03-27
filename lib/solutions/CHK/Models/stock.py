@@ -1,5 +1,8 @@
 from dataclasses import dataclass
-from lib.solutions.CHK.product import Product
+
+
+from lib.solutions.CHK.Models.product import Product
+
 
 @dataclass
 class Stock:
@@ -7,4 +10,6 @@ class Stock:
 
     def check_item_in_stock(self, product: Product):
         return product in self.stock
+
+
 

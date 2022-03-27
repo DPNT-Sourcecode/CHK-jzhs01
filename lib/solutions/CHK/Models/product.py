@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import Optional
-from lib.solutions.CHK.offer import Offer
+from lib.solutions.CHK.Models.offer import Offer
 
 
 @dataclass

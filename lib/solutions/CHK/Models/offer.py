@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from lib.solutions.CHK.product import Product
+from lib.solutions.CHK.Models.product import Product
 
 
 @dataclass
