@@ -16,7 +16,8 @@ productE = Product(sku="E", price=40,
                    # offer={FreeItem(product_count=2, product=productB, count=1)}
                    )
 
-current_stock = Stock(stock=(productA, productB, productC, productD, productE))
+current_stock = Stock(productA, productB, productC, productD, productE)
+
 
 
 
