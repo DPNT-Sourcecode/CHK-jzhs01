@@ -11,3 +11,7 @@ class Stock(Product):
             Product(sku="D", price=15)
         }
 
+    def check_item_in_stock(self, item):
+        return Product in self.stock
+
+
