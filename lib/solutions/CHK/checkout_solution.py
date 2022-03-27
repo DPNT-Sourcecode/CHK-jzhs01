@@ -1,8 +1,10 @@
 from collections import Counter
+from supermarket_stock import Stock
 
 
 # noinspection PyUnusedLocal
 # skus = unicode string
+
 
 def checkout(skus: str) -> int:
     """
@@ -45,9 +47,23 @@ def checkout(skus: str) -> int:
      I will implement the first approach now for the runtime consideration
     """
 
+    # Getting data from stock class
+    stock = Stock()
+    prices = stock.prices
+    deals = stock.deals
+
+    total = 0
+
+    # Grouping count by item
     basket = Counter(skus)  # <SC, TC> = O(n), O(n)
+
     for sku, quantity in basket.items():
-        pass
+        # Get total value for the deal
+        if sku in deals:
+            deal_quantity, price = deals[sku]
+            total += quantity // deal_quantity * price
+            quantity %= deal_quantity
 
+        total += quantity * prices[sku]
 
-
+    return total

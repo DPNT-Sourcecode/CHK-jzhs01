@@ -1,2 +1,5 @@
+from lib.solutions.CHK import checkout_solution
+
+
 def test_checkout():
-    assert False
+    assert checkout_solution.checkout("AAA") == 130

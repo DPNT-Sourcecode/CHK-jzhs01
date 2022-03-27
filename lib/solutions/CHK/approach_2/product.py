@@ -3,4 +3,3 @@ class Product:
         self.sku = sku
         self.price = price
         self.offer = offer
-
