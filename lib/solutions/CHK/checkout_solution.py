@@ -49,7 +49,12 @@ def checkout(skus: str) -> int:
     total = 0
 
     # Grouping count by item # <SC, TC> = O(n), O(n)
-    
+    basket = dict()
+    for item in skus:
+        product = Product(item=item)
+        if Stock().check_item_in_stock(product=product):
+            basket[product] = 
+
 
     # for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
     #
@@ -71,6 +76,7 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+
 
 
 
