@@ -1,6 +1,6 @@
 from collections import Counter
 
-from lib.solutions.CHK.offer import Offer
+from lib.solutions.CHK.offer import Offer, FreeItem, PriceReduction
 from lib.solutions.CHK.stock import Stock
 from lib.solutions.CHK.product import Product
 
@@ -40,7 +40,7 @@ def checkout(skus: str) -> int:
         It will be an int and not a float since the price of every item is a whole number
     """
 
-    productA = Product(sku="A", price=50, offer={Offer()})
+    productA = Product(sku="A", price=50, offer={PriceReduction()})
     productB = Product(sku="B", price=30, offer={2: 45})
     productC = Product(sku="C", price=20),
     productD = Product(sku="D", price=15)
@@ -77,4 +77,5 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+
 
