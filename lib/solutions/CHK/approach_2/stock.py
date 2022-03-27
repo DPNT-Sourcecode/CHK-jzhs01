@@ -11,6 +11,3 @@ class Stock(Product):
             Product(sku="D", price=15)
         }
 
-
-
-

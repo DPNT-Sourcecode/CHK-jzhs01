@@ -6,5 +6,3 @@ class Product:
 
     def __eq__(self, product):
         return self.sku == product.sku
-
-
