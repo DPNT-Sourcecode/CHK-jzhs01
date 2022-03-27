@@ -16,4 +16,3 @@ class PriceReduction(Offer):
 class FreeItem(Offer):
     product: Product
     count: int = 1
-
