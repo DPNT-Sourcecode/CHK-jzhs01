@@ -1,6 +1,6 @@
 from collections import Counter
 from lib.solutions.CHK.stock import Stock
-
+from lib.solutions.CHK.product import Product
 # noinspection PyUnusedLocal
 # skus = unicode string
 """
@@ -49,30 +49,29 @@ def checkout(skus: str) -> int:
     total = 0
 
     # Grouping count by item # <SC, TC> = O(n), O(n)
-    basket = dict()
-    for item in skus:
-        pass
+    
 
-    for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
+    # for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
+    #
+    #     # Accounting for the characters that are not stock
+    #     if sku not in prices:
+    #         return -1
+    #
+    #     # Get total value for the deal
+    #     if sku in deals:
+    #         deal_quantity, price = deals[sku]
+    #         total += quantity // deal_quantity * price
+    #         quantity %= deal_quantity
+    #
+    #     # Get value for the items that we have a record for SKU
+    #     if sku in prices:
+    #         total += quantity * prices[sku]
+    #
+    # return total
+    #
+    # from lib.solutions.CHK.product import Product
+    # return Product(sku="Z") in Stock().stock
 
-        # Accounting for the characters that are not stock
-        if sku not in prices:
-            return -1
-
-        # Get total value for the deal
-        if sku in deals:
-            deal_quantity, price = deals[sku]
-            total += quantity // deal_quantity * price
-            quantity %= deal_quantity
-
-        # Get value for the items that we have a record for SKU
-        if sku in prices:
-            total += quantity * prices[sku]
-
-    return total
-
-    from lib.solutions.CHK.product import Product
-    return Product(sku="Z") in Stock().stock
 
 
 
