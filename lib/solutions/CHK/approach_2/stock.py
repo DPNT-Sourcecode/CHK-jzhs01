@@ -11,7 +11,6 @@ class Stock(Product):
             Product(sku="D", price=15)
         }
 
-    def view_stock(self):
-        return self.stock
-
+    def __eq__(self, product):
+        return self.sku == product.sku
 
