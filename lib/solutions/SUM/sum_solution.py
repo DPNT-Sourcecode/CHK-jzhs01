@@ -1,5 +1,5 @@
 # noinspection PyShadowingBuiltins,PyUnusedLocal
-def compute(x: int, y: int) -> int:
+def compute(x: int = 0, y: int = 0) -> int:
     """
     x: a positive integer between 0-100
     y: a positive integer between 0-100
@@ -7,3 +7,4 @@ def compute(x: int, y: int) -> int:
     """
     # raise NotImplementedError()
     return x+y
+
