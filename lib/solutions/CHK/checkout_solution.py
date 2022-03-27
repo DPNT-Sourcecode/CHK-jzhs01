@@ -1,8 +1,10 @@
+from collections import Counter
 
 
 # noinspection PyUnusedLocal
 # skus = unicode string
-def checkout(skus):
+
+def checkout(skus: str) -> int:
     """
     Arguments:
     --------------
@@ -42,5 +44,10 @@ def checkout(skus):
      
      I will implement the first approach now for the runtime consideration
     """
+
+    basket = Counter(skus)  # <SC, TC> = O(n), O(n)
+    for sku, quantity in basket.items():
+        pass
+
 
 
