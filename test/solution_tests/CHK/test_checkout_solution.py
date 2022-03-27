@@ -87,5 +87,3 @@ def test_checkout_a():
 @pytest.mark.skip
 def test_checkout_ABCa():
     assert checkout_solution.checkout("ABCa") == -1
-
-

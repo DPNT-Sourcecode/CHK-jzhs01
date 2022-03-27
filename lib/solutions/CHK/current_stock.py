@@ -14,4 +14,3 @@ productE = Product(sku="E", price=40,
                    )
 
 current_stock = Stock(stock=(productA, productB, productC, productD, productE))
-
