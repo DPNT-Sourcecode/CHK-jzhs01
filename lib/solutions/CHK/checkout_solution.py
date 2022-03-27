@@ -4,16 +4,17 @@
 # skus = unicode string
 def checkout(skus):
     """
-    Args:
+    Arguments:
     --------------
     skus: str
         A string of all skus in the basket
 
-    Returns
+    Returns:
     --------------
     @return: int
-        total value of all items
+        total value of all items in the basket.
+        It will be an int and not a float since the price of every item is a whole number
     """
-    raise NotImplementedError()
+    pass
 
 
