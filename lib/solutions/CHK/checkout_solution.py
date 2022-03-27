@@ -79,5 +79,5 @@ def checkout(skus: str) -> int:
     # return total
 
     from lib.solutions.CHK.product import Product
-    return Product(sku="A") in Stock().stock
+    return Product(sku="Z") in Stock().stock
 
