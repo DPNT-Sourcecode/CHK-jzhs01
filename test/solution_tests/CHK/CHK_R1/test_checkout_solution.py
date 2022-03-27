@@ -1,5 +1,10 @@
 from lib.solutions.CHK import checkout_solution
 
+"""
+For testing, not only do I have to account for lower case characters but
+also for all other characters possible
+"""
+
 
 def test_checkout_empty():
     assert checkout_solution.checkout("") == 0
@@ -24,3 +29,9 @@ def test_checkout_CC():
 def test_checkout_len_80_CD():
     assert checkout_solution.checkout(
         "DDCDCDDCDDCCDCCDCCCDDDDCCCCCDCDCCCDDCDCDCCCCCDCCDDCDDDDCDCDDCDDDDDCDDCDCDCDCDCCD") == 1395
+
+
+def test_checkout_other_characters_present():
+    assert checkout_solution.checkout(
+        "DDCDCDDCDD-CCDCCD1C3C54C6D8DD9DCCCCCD&CDC!CCDDC?DCDCCCC2345678CDCCDDCDDDDCDCDDCDDDDDCDDCDCDCDCDCCD") == 1395
+
