@@ -57,7 +57,7 @@ def checkout(skus: str) -> int:
     total = 0
 
     # Grouping count by item
-    basket = Counter(skus)  # <SC, TC> = O(n), O(n)
+    basket = Counter(skus.capitalize())  # <SC, TC> = O(n), O(n)
 
     for sku, quantity in basket.items():
         # Get total value for the deal
@@ -69,5 +69,6 @@ def checkout(skus: str) -> int:
         total += quantity * prices[sku]
 
     return total
+
 
 
