@@ -4,5 +4,8 @@ class Product:
         self.price = price
         self.offer = offer
 
+    def __hash__(self):
+        return hash((self.sku, self.price, self.offer))
+
     def __eq__(self, product):
         return self.sku == product.sku
