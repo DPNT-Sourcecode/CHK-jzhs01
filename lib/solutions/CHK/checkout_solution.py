@@ -47,16 +47,14 @@ def checkout(skus: str) -> int:
     """
 
     # Getting data from stock class
-    # stock = Stock()
-    # prices = stock.get_prices()
-    # deals = stock.get_deals()
-    prices = {"A": 50, "B": 30, "C": 20, "D": 15}
-    deals = {"A": [3, 130], "B": [2, 45]}
+    stock = Stock()
+    prices = stock.get_prices()
+    deals = stock.get_deals()
 
     total = 0
 
     # Grouping count by item
-    basket = Counter(skus.upper())  # <SC, TC> = O(n), O(n)
+    basket = Counter(skus)  # <SC, TC> = O(n), O(n)
 
     for sku, quantity in basket.items():
         # Accounting for the characters that are not stock

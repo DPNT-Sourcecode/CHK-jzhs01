@@ -50,13 +50,22 @@ def test_checkout_exclamation():
     assert checkout_solution.checkout(
         "!") == -1
 
+
 def test_checkout_Z():
     assert checkout_solution.checkout(
         "Z") == -1
 
+
 def test_checkout_other_characters_present():
     assert checkout_solution.checkout(
         "DDCDCDDCDD-CCDCCD1C3C54C6D8DD9DCCCCCD&CDC!CCDDC?DCDCCCC2345678CDCCDDCDDDDCDCDDCDDDDDCDDCDCDCDCDCCD") == -1
+
+
+def test_checkout_a():
+    assert checkout_solution.checkout("a") == -1
+
+def test_checkout_a():
+    assert checkout_solution.checkout("ABCa") == -1
 
 
 
