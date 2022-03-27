@@ -46,6 +46,10 @@ def checkout(skus: str) -> int:
         It will be an int and not a float since the price of every item is a whole number
     """
 
+    # Base case
+    if skus == "":
+        return 0
+
     # Getting data from stock class
     stock = Stock()
     prices = stock.get_prices()
@@ -56,10 +60,12 @@ def checkout(skus: str) -> int:
     # Grouping count by item
     basket = Counter(skus)  # <SC, TC> = O(n), O(n)
 
-    for sku, quantity in basket.items():
+    for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
+
         # Accounting for the characters that are not stock
         if sku not in prices:
             return -1
+
         # Get total value for the deal
         if sku in deals:
             deal_quantity, price = deals[sku]
