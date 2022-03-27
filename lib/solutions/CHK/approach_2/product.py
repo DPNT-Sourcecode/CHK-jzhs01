@@ -4,3 +4,7 @@ class Product:
         self.price = price
         self.offer = offer
 
+    def __eq__(self, product):
+        return self.sku == product.sku
+
+
