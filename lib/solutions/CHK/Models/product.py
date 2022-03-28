@@ -1,6 +1,4 @@
 from dataclasses import dataclass
-from typing import Optional
-from lib.solutions.CHK.Models.offer import Offer
 
 
 @dataclass
@@ -14,3 +12,4 @@ class Product:
 
     def __eq__(self, product):
         return self.sku == product.sku
+

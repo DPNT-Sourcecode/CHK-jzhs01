@@ -33,27 +33,27 @@ def checkout(skus: str) -> int:
         else:
             return -1
 
-    return True
-    # for sku, quantity in basket.items():  # TC, SC = O(n), O(n)
-    #     # Offer Available
-    #     product = current_stock[sku]
-    #     if product.offer:
-    #         for offer in product.offer:
-    #
-    #             # Case when price reduction offer
-    #             if offer is isinstance(offer, PriceReduction()):
-    #                 product_count, new_price = offer.product_count, offer.new_price
-    #                 total += quantity // product_count * new_price
-    #                 quantity %= product_count
-    #
-    #             # Case when free item offer
-    #             elif offer is isinstance(offer, FreeItem()):
-    #                 product_count, free_product, count = offer.product_count, offer.product, count
-    #                 skus.append([free_product.sku] * quantity // product_count * count)
-    #     else:
-    #         total += quantity * product.price
-    #
-    # return total
+    for sku, quantity in basket.items():  # TC, SC = O(n), O(n)
+        # Offer Available
+        product = current_stock[sku]
+        if product.offer:
+            for offer in product.offer:
+
+                # Case when price reduction offer
+                if offer is isinstance(offer, PriceReduction):
+                    product_count, new_price = offer.product_count, offer.new_price
+                    total += quantity // product_count * new_price
+                    quantity %= product_count
+
+                # Case when free item offer
+                elif offer is isinstance(offer, FreeItem):
+                    product_count, free_product, count = offer.product_count, offer.product, count
+                    skus.append([free_product.sku] * quantity // product_count * count)
+        else:
+            total += quantity * product.price
+
+    return total
+
 
 
 

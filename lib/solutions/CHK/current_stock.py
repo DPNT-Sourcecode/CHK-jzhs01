@@ -12,10 +12,11 @@ productB = Product(sku="B", price=30,
                    offer={productB_offer_1})
 productC = Product(sku="C", price=20)
 productD = Product(sku="D", price=15)
-# productE = Product(sku="E", price=40,
-#                    offer={FreeItem(product_count=2, product=productB, count=1)}
-#                    )
+productE = Product(sku="E", price=40,
+                   offer={FreeItem(product_count=2, product=productB, count=1)}
+                   )
 
 current_stock = {"A": productA, "B": productB, "C": productC, "D": productD, "E": productE}
+
 
 
