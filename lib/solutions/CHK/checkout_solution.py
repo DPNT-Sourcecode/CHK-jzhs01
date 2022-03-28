@@ -44,7 +44,7 @@ def checkout(skus: str) -> int:
     basket = dict()
     for product_sku in skus:
         product = Product(sku=product_sku)
-        if current_stock.check_item_in_stock(product=product):
+        if product in current_stock:
             basket[product] = basket.get(product, 0) + 1
         else:
             return -1
@@ -69,4 +69,5 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+
 
