@@ -19,4 +19,3 @@ class FreeItem(Offer):
         super().__init__(product_count)
         self.product = product
         self.count = count
-

@@ -17,6 +17,3 @@ productE = Product(sku="E", price=40,
                    )
 
 current_stock = {"A": productA, "B": productB, "C": productC, "D": productD, "E": productE}
-
-
-
