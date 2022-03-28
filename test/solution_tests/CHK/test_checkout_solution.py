@@ -78,3 +78,10 @@ def test_checkout_ABCa():
 def test_checkout_EE():
     assert checkout_solution.checkout("EE") == 80
 
+def test_checkout_CECE():
+    assert checkout_solution.checkout("CECE") == 120
+
+def test_checkout_AAAEEAAAEAAAE():
+    assert checkout_solution.checkout("AAAEEAAAEAAAE") == 510
+
+
