@@ -8,4 +8,5 @@ class Stock:
 
     @classmethod
     def check_if_item_in_stock(cls, product: Product):
-        return product in cls.stock
+        return product in cls
+
