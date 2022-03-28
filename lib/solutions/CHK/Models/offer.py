@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 
-
 class Offer:
     def __init__(self, product_count):
         self.product_count = product_count
@@ -14,6 +13,7 @@ class PriceReduction(Offer):
 # class FreeItem(Offer):
 #     product: Product
 #     count: int = 1
+
 
 
 
