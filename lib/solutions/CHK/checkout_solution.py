@@ -50,10 +50,7 @@ def checkout(skus: str) -> int:
                     product_count, free_product, count = offer.product_count, offer.product, offer.count
                     skus += free_product.sku * (quantity // product_count * count)
                 print(total)
+
         total += quantity * product.price
 
     return total
-
-
-
-

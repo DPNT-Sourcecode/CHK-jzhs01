@@ -83,6 +83,3 @@ def test_checkout_CECE():
 
 def test_checkout_AAAEEAAAEAAAE():
     assert checkout_solution.checkout("AAAEEAAAEAAAE") == 540
-
-
-
