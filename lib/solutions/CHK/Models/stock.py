@@ -6,6 +6,6 @@ class Stock:
     def __init__(self, stock: set() = None):
         self.stock = stock
 
-    # def check_item_in_stock(self, product: Product):
-    #     return product in self.stock
-
+    @classmethod
+    def check_if_item_in_stock(cls, product: Product):
+        return product in cls.stock
