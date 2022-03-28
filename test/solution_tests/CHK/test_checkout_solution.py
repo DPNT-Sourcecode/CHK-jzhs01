@@ -74,3 +74,7 @@ def test_checkout_a():
 def test_checkout_ABCa():
     assert checkout_solution.checkout("ABCa") == -1
 
+
+def test_checkout_EE():
+    assert checkout_solution.checkout("EE") == 80
+
