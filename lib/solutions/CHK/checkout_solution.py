@@ -3,7 +3,9 @@ from lib.solutions.CHK.current_stock import current_stock
 
 # noinspection PyUnusedLocal
 # skus = unicode string
-
+"""
+PLEASE READ explanation.txt
+"""
 
 def checkout(skus: str) -> int:
     """
@@ -25,11 +27,15 @@ def checkout(skus: str) -> int:
     basket = dict()
     for product_sku in skus:
         product = Product(sku=product_sku)
-        return product in current_stock
-        # if product in current_stock:
-        #     basket[product] = basket.get(product, 0) + 1
-        # else:
-        #     return -1
+
+        if product in current_stock:
+            basket[product] = basket.get(product, 0) + 1
+        else:
+            return -1
+
+    for product, quantity in basket.items(): # TC, SC = O(n), O(n)
+        if product.offer:
+            print(product.offer)
 
     # for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
     #
@@ -51,6 +57,7 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+
 
 
 
