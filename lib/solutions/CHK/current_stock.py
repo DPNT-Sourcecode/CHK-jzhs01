@@ -1,4 +1,4 @@
-from lib.solutions.CHK.Models.offer import PriceReduction  # , FreeItem
+from lib.solutions.CHK.Models.offer import PriceReduction, FreeItem
 from lib.solutions.CHK.Models.product import Product
 from lib.solutions.CHK.Models.stock import Stock
 
@@ -13,7 +13,8 @@ productB = Product(sku="B", price=30,
 productC = Product(sku="C", price=20)
 productD = Product(sku="D", price=15)
 productE = Product(sku="E", price=40,
-                   # offer={FreeItem(product_count=2, product=productB, count=1)}
+                   offer={FreeItem(product_count=2, product=productB, count=1)}
                    )
 
 current_stock = {"A": productA, "B": productB, "C": productC, "D": productD, "E": productE}
+

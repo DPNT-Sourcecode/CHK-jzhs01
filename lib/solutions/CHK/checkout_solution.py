@@ -1,3 +1,4 @@
+from lib.solutions.CHK.Models.offer import PriceReduction, FreeItem
 from lib.solutions.CHK.Models.product import Product
 from lib.solutions.CHK.current_stock import current_stock
 
@@ -6,6 +7,7 @@ from lib.solutions.CHK.current_stock import current_stock
 """
 PLEASE READ explanation.txt
 """
+
 
 def checkout(skus: str) -> int:
     """
@@ -32,12 +34,17 @@ def checkout(skus: str) -> int:
         else:
             return -1
 
-    for sku, quantity in basket.items(): # TC, SC = O(n), O(n)
+    for sku, quantity in basket.items():  # TC, SC = O(n), O(n)
         # Offer Available
         product = current_stock[sku]
         if product.offer:
             for offer in product.offer:
-                
+                # Case when price reduction offer
+                if offer is isinstance(offer, PriceReduction()):
+                    product_count, new_price = offer.product_count, offer.new_price
+                # Case when free item offer
+                elif offer is isinstance(offer, FreeItem()):
+                    pass
         else:
             total += quantity * product.price
 
@@ -61,4 +68,5 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+
 
