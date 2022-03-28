@@ -33,8 +33,13 @@ def checkout(skus: str) -> int:
             return -1
 
     for sku, quantity in basket.items(): # TC, SC = O(n), O(n)
-        if current_stock[sku].offer:
-            return True
+        # Offer Available
+        product = current_stock[sku]
+        if product.offer:
+            for offer in product.offer:
+                
+        else:
+            total += quantity * product.price
 
     # for sku, quantity in basket.items():  # <SC, TC> = O(n), O(n)
     #
@@ -56,3 +61,4 @@ def checkout(skus: str) -> int:
     #
     # from lib.solutions.CHK.product import Product
     # return Product(sku="Z") in Stock().stock
+
