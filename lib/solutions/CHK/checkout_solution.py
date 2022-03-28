@@ -46,11 +46,11 @@ def checkout(skus: str) -> int:
                     quantity %= product_count
 
                 # Case when free item offer
-                elif offer is isinstance(offer, FreeItem):
+                if offer is isinstance(offer, FreeItem):
                     product_count, free_product, count = offer.product_count, offer.product, count
                     skus.append([free_product.sku] * quantity // product_count * count)
 
-        print(f"Product Price: {product.price}")
         total += quantity * product.price
 
     return total
+
