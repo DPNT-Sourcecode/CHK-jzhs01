@@ -37,13 +37,11 @@ def checkout(skus: str) -> int:
         # Offer Available
         product = current_stock[sku]
         if product.offer:
-
             for offer in product.offer:
 
                 # Case when price reduction offer
                 if isinstance(offer, PriceReduction):
                     product_count, new_price = offer.product_count, offer.new_price
-                    print(product_count, new_price)
                     total += quantity // product_count * new_price
                     quantity %= product_count
 
@@ -51,10 +49,11 @@ def checkout(skus: str) -> int:
                 if isinstance(offer, FreeItem):
                     product_count, free_product, count = offer.product_count, offer.product, offer.count
                     skus += free_product.sku * (quantity // product_count * count)
-
+                print(total)
         total += quantity * product.price
 
     return total
+
 
 
 
